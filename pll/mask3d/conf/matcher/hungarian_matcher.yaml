@@ -1,0 +1,9 @@
+# @package _group_
+_target_: mask3d.models.matcher.HungarianMatcher
+cost_class: 5.
+cost_mask: 5.
+cost_dice: 2.
+cost_l1: 0.
+cost_bbox: 0.
+matching_margin: 0.1
+num_points: -1

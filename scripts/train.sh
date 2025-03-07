@@ -1,0 +1,32 @@
+export PYTHONPATH=./
+
+deepspeed --master_port=40000 pll/main.py \
+  --version="meta-llama/Llama-2-7b-hf" \
+  --dataset_dir='./data/plldata' \
+  --vision_pretrained="pll/ckpt/mask3d/scannet200.ckpt" \
+  --dataset="refer_seg||sem_seg" \
+  --sem_seg_data "scannet200" \
+  --scene_cap_data "scenecap" \
+  --refer_seg_data "scanrefer||nr3d||sr3d||multi3drefer" \
+  --refer_sample_rates "1,1,1,1" \
+  --val_dataset "refer_seg||scanrefer" \
+  --batch_size 12 \
+  --grad_accumulation_steps 1 \
+  --warmup_ratio 0.02 \
+  --val_batch_size 12 \
+  --global_train_step 5000 \
+  --steps_per_epoch 500 \
+  --lr 3e-4 \
+  --lora_r 8 \
+  --lora_alpha 16 \
+  --sample_rates "1, 50" \
+  --conv_type "llava_v1" \
+  --precision "bf16" \
+  --ce_loss_weight 1 \
+  --iou_loss_weight 2 \
+  --bce_loss_weight 2 \
+  --dice_loss_weight 5 \
+  --l1_loss_weight 1 \
+  --box_loss_weight 2 \
+  --train_pll \
+  --exp_name "pll-llama-7b-3e-4" \
