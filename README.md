@@ -1,6 +1,16 @@
-# Point Linguist Model
+<h1 align="center">Point Linguist Model: Segment Any Object via Bridged Large 3D-Language Model</h1>
 
-> Offical Repo of paper [_Segment Any Object via Bridged Large 3D-Language Model_](https://arxiv.org/abs/2509.07825)
+<div>
+<br>
+
+<div align="center">
+
+[![Github](https://img.shields.io/badge/Repo-000000?style=for-the-badge&logo=github&logoColor=000&logoColor=white)](https://github.com/zhh6425/PLM/tree/main)
+[![arXiv](https://img.shields.io/badge/Paper-red?style=for-the-badge&logo=arXiv&logoColor=white&labelColor)]([https://openreview.net/forum?id=5wxyCidRsK](https://arxiv.org/abs/2509.07825))
+
+</div>
+
+---
 
 # Preparing data
 
@@ -26,4 +36,20 @@ pip install "git+https://github.com/erikwijmans/Pointnet2_PyTorch.git#egg=pointn
 # Run Training
 ```
 bash scripts/train.sh
+```
+
+## Citation
+
+If you find this code useful for your research, please cite the following paper.
+
+```bibtex
+@misc{huang2026pointlinguistmodelsegment,
+      title={Point Linguist Model: Segment Any Object via Bridged Large 3D-Language Model}, 
+      author={Zhuoxu Huang and Mingqi Gao and Jungong Han},
+      year={2026},
+      eprint={2509.07825},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2509.07825}, 
+}
 ```
